@@ -80,7 +80,6 @@ Slotting will open at <t:${slotTimeEpoch}:R>, <t:${slotTimeEpoch}:F> in <#${slot
 		<div>
 			<div class="content">
 				<div class="flex flex-col gap-1">
-					<pre>{JSON.stringify(loadedPreset.id, null, 2)}</pre>
 					<div class="flex flex-row gap-2 w-full">
 						<label class="{labelCva()} flex-grow">
 							Title
