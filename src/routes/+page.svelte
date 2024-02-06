@@ -2,7 +2,6 @@
 	import { label as labelCva } from "$lib/styles/label"
 	import { input as inputCva } from "$lib/styles/input"
 	import type { Snapshot } from "./$types"
-	import { undent } from "$lib/util"
 	import { button } from "$lib/styles/button"
 	import { Trash } from "lucide-svelte"
 	import { db, deletePreset, addPreset, Preset, savePreset } from "$lib/db"
@@ -25,8 +24,7 @@
 
 	$: slotTimeEpoch = Math.floor(new Date(loadedPreset.slotTime).getTime() / 1000).toString()
 
-	$: formatted = undent`
-<@&882302575439925269>
+	$: formatted = `<@&882302575439925269>
 # Operation: ${loadedPreset.title}
 Op time: <t:${opTimeEpoch}:R>, <t:${opTimeEpoch}:F>
 Op type: ${loadedPreset.type}
@@ -46,8 +44,7 @@ ${loadedPreset.notes}
 [Roster](${loadedPreset.roster})
 [Slotting procedure for those who are new](${slottingProcedureLink})
 
-Slotting will open at <t:${slotTimeEpoch}:R>, <t:${slotTimeEpoch}:F> in <#${slottingChannelID}>
-`
+Slotting will open at <t:${slotTimeEpoch}:R>, <t:${slotTimeEpoch}:F> in <#${slottingChannelID}>`
 </script>
 
 <div class="flex flex-row min-h-screen">
@@ -156,8 +153,12 @@ Slotting will open at <t:${slotTimeEpoch}:R>, <t:${slotTimeEpoch}:F> in <#${slot
 
 					<button
 						class={button()}
-						on:click={() => {
-							savePreset(loadedPreset)
+						on:click={async () => {
+							try {
+								await savePreset(loadedPreset)
+							} catch (e) {
+								console.error(e)
+							}
 						}}>
 						overwrite preset
 					</button>
