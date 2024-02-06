@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import { label } from "$lib/styles/label"
+	import { input } from "$lib/styles/input"
+</script>
+
+<div class="content">
+	<h1 class="h1">Operation Announcement Generator</h1>
+
+	<label class={label()}>
+		Test
+		<input type="text" class={input()} />
+	</label>
+</div>
