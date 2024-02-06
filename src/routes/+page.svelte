@@ -2,7 +2,7 @@
 	import { label as labelCva } from "$lib/styles/label"
 	import { input as inputCva } from "$lib/styles/input"
 	import type { Snapshot } from "./$types"
-	import { undent } from "@bscotch/utility"
+	import { undent } from "$lib/util"
 	import { button } from "$lib/styles/button"
 	import { Trash } from "lucide-svelte"
 	import { db, deletePreset, addPreset, Preset, savePreset } from "$lib/db"

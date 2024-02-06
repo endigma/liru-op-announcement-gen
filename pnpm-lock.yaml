@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
-  '@bscotch/utility':
-    specifier: ^7.2.0
-    version: 7.2.0
   '@fontsource-variable/inter':
     specifier: ^5.0.16
     version: 5.0.16
@@ -451,15 +448,6 @@ packages:
       '@babel/helper-string-parser': 7.23.4
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
-    dev: true
-
-  /@bscotch/utility@7.2.0:
-    resolution: {integrity: sha512-LBf3peXw150JiLwqgo1gaubGdcvC02dQH++Udj3G6ttKTMWdtTxdrWX7Ny2MsdX3IIK5AflCO9m82z74k+KMFg==}
-    dependencies:
-      debug: 4.3.4
-      tslib: 2.6.2
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@esbuild/aix-ppc64@0.19.12:
