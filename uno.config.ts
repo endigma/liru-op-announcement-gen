@@ -3,7 +3,7 @@ import transformerVariantGroup from "@unocss/transformer-variant-group"
 import { defineConfig, presetIcons, presetUno } from "unocss"
 import { presetRadix, type RadixColors } from "unocss-preset-radix"
 
-const palette: RadixColors[] = ["sage", "jade"]
+const palette: RadixColors[] = ["sage", "jade", "red"]
 const aliases: { [key: string]: RadixColors } = {
 	accent: "jade",
 	base: "sage",
@@ -37,7 +37,7 @@ export default defineConfig({
 		h5: "text-lg font-semibold",
 		h6: "font-semibold",
 
-		content: "max-w-6xl mx-auto px-6 py-10",
+		content: "max-w-4xl mx-auto px-6 py-10",
 	},
 	safelist: [
 		...Array.from({ length: 10 }, (_, i) => `p-${i + 1}`),

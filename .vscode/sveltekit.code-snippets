@@ -1,0 +1,8 @@
+{
+	"JsonPre": {
+		"prefix": "jsonpre",
+		"scope": "svelte",
+		"body": "<pre>{JSON.stringify($1, null, 2)}</pre>",
+		"description": "JSON.stringify in a pre element",
+	},
+}
